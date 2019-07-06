@@ -1,0 +1,80 @@
+.stroke {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.ocean {
+  fill: #5e9bff;
+}
+
+.graticule {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .75px;
+  stroke-opacity: .5;
+}
+
+.panel-body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.panel-body-list {
+  margin: 0px;
+  padding: 0px;
+}
+
+.map-panel {
+  padding: 0px;
+  margin: 0px;
+}
+
+.under-panel {
+  padding: 0px;
+  margin: 0px;
+}
+
+.left-panel {
+  padding: 0px;
+  margin: 0px;
+}
+
+*.col-lg-6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#battle.dc-chart select {
+  height: 30px;
+  width: 378px;
+}
+
+#conflict.dc-chart select {
+  height: 758px;
+  width: 378px;
+}
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+.points {
+  cursor: pointer;
+  stroke: "";
+  fill-opacity: 1;
+}
+
+.points.active {
+  stroke: "black";
+  stroke-width: 1;
+}
+
+.land {
+  fill: #333;
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

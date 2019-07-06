@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Battlefield Casualties</title>
+  <style>
+
+  </style>
+
+  <script src="libraries/d3/d3.js"></script>
+  <script src="libraries/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="libraries/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+  <script src="libraries/d3-tip/index.js" type="text/javascript"></script>
+  <script src="libraries/queue/queue.js" type="text/javascript"></script>
+  <script src="libraries/crossfilter/crossfilter.js" type="text/javascript"></script>
+  <script src="libraries/dc/dc.js" type="text/javascript"></script>
+  <script src="libraries/d3.geo.zoom.js" type="text/javascript"></script>
+  <script src="libraries/topojson/topojson.js" type="text/javascript"></script>
+
+  <link href="libraries/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="libraries/dc/dc.css" rel="stylesheet" type="text/css">
+  <link href="libraries/d3-tip/examples/example-styles.css" rel="stylesheet" type="text/css">
+  <link href="css/layout.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <div class="container" id="map">
+    <div class="col-lg-4">
+      <div class="row">
+        <div class="panel panel-default left-panel">
+          <div class="panel-heading">
+            BATTLE
+            <div class="pull-right">
+              <a class="btn btn-danger btn-xs reset"
+                href="javascript:battleList.filterAll();dc.redrawAll('charts');">RESET</a>
+            </div>
+          </div>
+          <!-- panel heading  -->
+
+          <div class="panel-body panel-body-list">
+            <div id="battle"></div>
+          </div>
+          <!-- panel body -->
+        </div>
+        <!-- panel -->
+      </div>
+      <!-- row -->
+
+      <div class="row">
+        <div class="panel panel-default left-panel">
+          <div class="panel-heading">
+            CONFLICT
+            <div class="pull-right">
+              <a class="btn btn-danger btn-xs reset"
+                href="javascript:conflictList.filterAll();dc.redrawAll('charts');">RESET</a>
+            </div>
+          </div>
+          <!-- panel heading  -->
+
+          <div class="panel-body panel-body-list">
+            <div id="conflict"></div>
+          </div>
+          <!-- panel body -->
+        </div>
+        <!-- panel -->
+      </div>
+      <!-- row -->
+
+
+
+    </div>
+    <!-- col -->
+
+    <div class="col-lg-8">
+      <div class="row">
+        <div class="panel panel-default map-panel">
+          <div class="panel-heading">
+            MAP
+          </div>
+          <!-- panel heading -->
+
+
+          <div class="panel-body" style="width:800px">
+            <div id="map-svg"></div>
+
+          </div>
+          <!-- panel body -->
+        </div>
+        <!-- panel -->
+      </div>
+      <!-- row -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="panel panel-default under-panel">
+            <div class="panel-heading">
+              YEAR
+              <div class="pull-right">
+                <a class="btn btn-danger btn-xs reset"
+                  href="javascript:yearChart.filterAll();dc.redrawAll('charts');">RESET</a>
+              </div>
+            </div>
+            <!-- panel heading -->
+
+            <div class="panel-body">
+              <div id="year"></div>
+            </div>
+            <!-- panel body -->
+
+          </div>
+          <!-- panel -->
+
+        </div>
+        <!-- col -->
+
+        <div class="col-lg-6">
+          <div class="panel panel-default under-panel">
+            <div class="panel-heading">
+              CASUALTIES
+              <div class="pull-right">
+                <a class="btn btn-danger btn-xs reset"
+                  href="javascript:casualtyChart.filterAll();dc.redrawAll('charts');">RESET</a>
+              </div>
+            </div>
+            <!-- panel heading -->
+
+            <div class="panel-body">
+              <div id="casualties"></div>
+            </div>
+
+          </div>
+          <!-- panel -->
+        </div>
+        <!-- col -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- container -->
+
+  <script src="battle.js" type="text/javascript"></script>
+</body>
+
+</html>
